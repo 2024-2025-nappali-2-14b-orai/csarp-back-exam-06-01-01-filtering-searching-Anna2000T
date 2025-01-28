@@ -11,8 +11,9 @@ namespace Kreta.Shared.Dtos
         public int SchoolYear { get; set; }
         public SchoolClassType SchoolClass { get; set; }
         public string EducationLevel { get; set; }
+        public bool IsWoman { get; set; }
 
-        public StudentDto(Guid id, string firstName, string lastName, DateTime birthsDay, int schoolYear, SchoolClassType schoolClass, string educationLevel)
+        public StudentDto(Guid id, string firstName, string lastName, DateTime birthsDay, int schoolYear, SchoolClassType schoolClass, string educationLevel, bool iswoman)
         {
             Id = id;
             FirstName = firstName;
@@ -21,6 +22,7 @@ namespace Kreta.Shared.Dtos
             SchoolYear = schoolYear;
             SchoolClass = schoolClass;
             EducationLevel = educationLevel;
+            IsWoman = iswoman;
         }
 
         public StudentDto()
@@ -32,6 +34,7 @@ namespace Kreta.Shared.Dtos
             SchoolYear = 9;
             SchoolClass = SchoolClassType.ClassA;
             EducationLevel = string.Empty;
+            IsWoman = false;
         }
     }
 }

@@ -18,7 +18,8 @@ namespace Kreata.Backend.Context
                     BirthsDay=new DateTime(2022,10,10),
                     SchoolYear=9,
                     SchoolClass = SchoolClassType.ClassA,
-                    EducationLevel="érettségi"
+                    EducationLevel="érettségi",
+                    IsWoman=false,
                 },
                 new Student
                 {
@@ -28,7 +29,8 @@ namespace Kreata.Backend.Context
                     BirthsDay=new DateTime(2021,4,4),
                     SchoolYear=10,
                     SchoolClass = SchoolClassType.ClassB,
-                    EducationLevel="érettségi"
+                    EducationLevel="érettségi",
+                    IsWoman = true,
                 }
             };
 
