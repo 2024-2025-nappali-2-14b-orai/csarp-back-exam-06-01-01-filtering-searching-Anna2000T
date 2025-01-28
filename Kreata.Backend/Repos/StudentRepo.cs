@@ -18,9 +18,9 @@ namespace Kreata.Backend.Repos
             return await _dbSet!.FindByCondition<Student>(s => s.FirstName == firstName && s.LastName == lastName).FirstOrDefaultAsync() ?? new Student();
         }
 
-        public Task<int> GetNumberOfMenAsync()
+        public async Task<int> GetNumberOfMenAsync()
         {
-            return null;
+            return await _dbSet!.CountAsync(i=> i.IsWoman == false);
         }
 
         public async Task<int> GetNumberOfStudentsAsync()
@@ -40,7 +40,9 @@ namespace Kreata.Backend.Repos
                 .FindByCondition<Student>(s =>s.SchoolYear==schoolYear && s.SchoolClass==schoolClassType).ToListAsync();
         }
 
-        
-
+        public async Task<List<Student>> GetAllTheStudentsBySchoolYearAsync(int schoolYears)
+        {
+            return await _dbSet!.FindByCondition<Student>(i=>i.SchoolYear == schoolYears).ToListAsync();
+        }
     }
 }

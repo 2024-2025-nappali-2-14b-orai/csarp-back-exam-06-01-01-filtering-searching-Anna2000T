@@ -24,6 +24,17 @@ namespace Kreata.Backend.Context
                 new Student
                 {
                     Id=Guid.NewGuid(),
+                    FirstName="János",
+                    LastName="Jegy",
+                    BirthsDay=new DateTime(2022,10,10),
+                    SchoolYear=9,
+                    SchoolClass = SchoolClassType.ClassA,
+                    EducationLevel="érettségi",
+                    IsWoman=false,
+                },
+                new Student
+                {
+                    Id=Guid.NewGuid(),
                     FirstName="Szonja",
                     LastName="Stréber",
                     BirthsDay=new DateTime(2021,4,4),
